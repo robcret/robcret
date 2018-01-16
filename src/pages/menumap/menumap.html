@@ -1,0 +1,39 @@
+
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Carte</ion-title>
+    </ion-toolbar>
+  </ion-header>
+ 
+  <ion-content (swipe)="panEvent($event)">
+      <ion-card>
+      <ion-item>
+          <ion-label>BMX</ion-label>
+          <ion-checkbox [(ngModel)]="BMX" (ionChange)="datachanged($event,'BMX')" name="BMX"  >BMX</ion-checkbox>
+        </ion-item>
+        
+        <ion-item>
+            <ion-label>Skate</ion-label>
+            <ion-checkbox  [(ngModel)]="Skate" name="Skate"  ></ion-checkbox>
+          </ion-item>
+
+          <ion-item>
+              <ion-label>Roller</ion-label>
+              <ion-checkbox  [(ngModel)]="Roller" name="Roller"  ></ion-checkbox>
+            </ion-item>
+
+            <ion-item>
+                <ion-label>Freerun</ion-label>
+                <ion-checkbox [(ngModel)]="Freerun" name="Freerun"  ></ion-checkbox>
+              </ion-item>
+
+              <ion-item>
+                  <ion-label>Autre</ion-label>
+                  <ion-checkbox  [(ngModel)]="Autre" name="Autre"  ></ion-checkbox>
+                </ion-item>
+              </ion-card>
+  </ion-content>
+
+ 
+<!-- main navigation -->
+<ion-nav [root]="homePage" #content swipeBackEnabled="false"></ion-nav>
